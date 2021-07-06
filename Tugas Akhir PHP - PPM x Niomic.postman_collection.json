@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "5259ad19-b108-4b55-a539-698e825927bc",
+		"name": "Tugas Akhir PHP - PPM x Niomic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Biodata",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nama",
+							"value": "Helmianto",
+							"type": "text"
+						},
+						{
+							"key": "no_hp",
+							"value": "08988710692",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "Jl. Tembalang Selatan No. 12, Semarang",
+							"type": "text"
+						},
+						{
+							"key": "hobi",
+							"value": "Membaca",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/D:/SS subscribe 2.PNG"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/biodatas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"biodatas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Biodatas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/biodatas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"biodatas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Biodata",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nama",
+							"value": "Helmianto",
+							"type": "text"
+						},
+						{
+							"key": "no_hp",
+							"value": "08732382938",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "Pondok Raden Patah",
+							"type": "text"
+						},
+						{
+							"key": "hobi",
+							"value": "Membaca",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/D:/capture2.png"
+						},
+						{
+							"key": "",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/biodatas/1?_method=PUT",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"biodatas",
+						"1"
+					],
+					"query": [
+						{
+							"key": "_method",
+							"value": "PUT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Biodata",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/biodatas/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"biodatas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
