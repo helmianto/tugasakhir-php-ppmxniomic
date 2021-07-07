@@ -72,7 +72,13 @@ class BiodataController extends Controller
      */
     public function show($id)
     {
-        //
+        $biodata = Biodata::find($id);
+        $biodata->foto = url('storage/'.$biodata->foto);
+        return response([
+            'status' => true,
+            'message' => "Detail Data Biodata",
+            'data' => $biodata
+        ], 200);
     }
 
     /**

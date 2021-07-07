@@ -20,6 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('biodatas', [BiodataController::class, 'index']);
+Route::get('biodatas/{id}', [BiodataController::class, 'show']);
 Route::post('biodatas', [BiodataController::class, 'store']);
 Route::put('biodatas/{id}', [BiodataController::class, 'update']);
 Route::delete('biodatas/{id}', [BiodataController::class, 'destroy']);
